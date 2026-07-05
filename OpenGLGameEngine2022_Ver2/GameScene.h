@@ -12,6 +12,7 @@ public:
 
 public:
 	GameObject* gameboard;
+	int bubble_r;
 
 };
 
