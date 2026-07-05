@@ -4,8 +4,8 @@
 
 using namespace std;
 
-int windowWidth = 800;
-int windowHeight = 600;
+int windowWidth = 700;
+int windowHeight = 900;
 
 chrono::system_clock::time_point lastFrameTime;
 
@@ -43,7 +43,7 @@ void display() {
 }
 
 int main(int argc, char** argv) {
-	std::cout << "Programmer: <your name>\n";
+	std::cout << "Programmer: Ko\n";
 	std::cout << "Compiled on " << __DATE__ << ", " << __TIME__ << std::endl << std::endl;
 
 	// init GLUT and create Window
@@ -52,12 +52,18 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(windowWidth, windowHeight);               // set the window size
 
 	// create the window
-	glutCreateWindow("Introduction to OpenGL");
+	glutCreateWindow("Bubble");
 	initRendering();                            // initialize rendering
+
+	HWND hwnd = FindWindowA(NULL, "Bubble");		//fix window size
+	LONG style = GetWindowLongA(hwnd, GWL_STYLE);
+	style = style & ~WS_MAXIMIZEBOX;
+	style = style & ~WS_THICKFRAME;
+	SetWindowLongA(hwnd, GWL_STYLE, style);
 
 	lastFrameTime = chrono::system_clock::now();
 
-	SceneManager::GetInstance()->LoadScene("TitleScene");
+	SceneManager::GetInstance()->LoadScene("GameScene");
 
 	// register handler functions
 	glutReshapeFunc(cameraSetup);               // resiz window and camera setup

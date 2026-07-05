@@ -1,6 +1,7 @@
 #include "Engine.h"
 #include "SceneManager.h"
 #include "TitleScene.h"
+#include"GameScene.h"
 
 SceneManager* SceneManager::instance = nullptr;
 
@@ -50,6 +51,7 @@ Scene* SceneManager::CreateScene(string sceneName)
     Scene* tmpScene = nullptr;
     //create other scenes here
     if (sceneName == "TitleScene") { tmpScene = new TitleScene(); }
+    if (sceneName == "GameScene") { tmpScene = new GameScene(); }
 
     if (tmpScene != nullptr)
     {
