@@ -8,6 +8,12 @@ void GameScene::Init() {
 	gameboard = new GameObject("Background.png");
 	gameboard->SetPosition(350, 450);
 	gameboard->SetZOrder(-0.5f);
+
+	//gamelevel
+	int totlaEnemies = 0;
+	if (curlv == 1) {
+
+	}
 }
 
 void GameScene::Draw()
@@ -30,4 +36,23 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 {
 	__super::MouseOnClick(button, state, x, y);
 
+}
+
+void GameScene::PlayerMove(int x, int y)
+{
+}
+
+bool GameScene::IsgridEmpty(int x, int y)
+{
+	return false;
+}
+
+bool GameScene::CheckWin()
+{
+	return false;
+}
+
+bool GameScene::Checkfull()
+{
+	return false;
 }

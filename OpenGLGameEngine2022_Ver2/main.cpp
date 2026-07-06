@@ -57,7 +57,7 @@ int main(int argc, char** argv) {
 
 	lastFrameTime = chrono::system_clock::now();
 
-	SceneManager::GetInstance()->LoadScene("TitleScene");
+	SceneManager::GetInstance()->LoadScene("GameScene");
 
 	// register handler functions
 	glutReshapeFunc(cameraSetup);               // resiz window and camera setup

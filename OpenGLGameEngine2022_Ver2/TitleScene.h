@@ -13,5 +13,6 @@ public:
 
 public:
 	GameObject* box;
+	GameObject* startBtn;
 };
 
