@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(windowWidth, windowHeight);               // set the window size
 
 	// create the window
-	glutCreateWindow("Introduction to OpenGL");
+	glutCreateWindow("BUBBLE");
 	initRendering();                            // initialize rendering
 
 	lastFrameTime = chrono::system_clock::now();
