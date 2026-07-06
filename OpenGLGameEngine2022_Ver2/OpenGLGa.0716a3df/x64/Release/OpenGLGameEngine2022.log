@@ -1,0 +1,77 @@
+﻿  AudioManager.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'AudioManager.cpp')
+  
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'AudioManager.cpp')
+  
+  GameObject.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(86,46): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(86,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(87,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(87,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(88,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(88,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(89,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(89,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(99,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(100,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  GameScene.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'GameScene.cpp')
+  
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'GameScene.cpp')
+  
+  main.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\main.cpp(21,26): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  Scene.cpp
+  SceneManager.cpp
+  Sprite.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Sprite.cpp(81,25): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Sprite.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+  TextureManager.cpp
+  TitleScene.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'TitleScene.cpp')
+  
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'TitleScene.cpp')
+  
+AudioManager.obj : error LNK2001: unresolved external symbol FMOD_System_Create
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::playSound(class FMOD::Sound *,class FMOD::ChannelGroup *,bool,class FMOD::Channel * *)" (?playSound@System@FMOD@@QEAA?AW4FMOD_RESULT@@PEAVSound@2@PEAVChannelGroup@2@_NPEAPEAVChannel@2@@Z)
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::createSound(char const *,unsigned int,struct FMOD_CREATESOUNDEXINFO *,class FMOD::Sound * *)" (?createSound@System@FMOD@@QEAA?AW4FMOD_RESULT@@PEBDIPEAUFMOD_CREATESOUNDEXINFO@@PEAPEAVSound@2@@Z)
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::init(int,unsigned int,void *)" (?init@System@FMOD@@QEAA?AW4FMOD_RESULT@@HIPEAX@Z)
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::release(void)" (?release@System@FMOD@@QEAA?AW4FMOD_RESULT@@XZ)
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::Sound::release(void)" (?release@Sound@FMOD@@QEAA?AW4FMOD_RESULT@@XZ)
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::ChannelControl::setVolume(float)" (?setVolume@ChannelControl@FMOD@@QEAA?AW4FMOD_RESULT@@M@Z)
+AudioManager.obj : error LNK2001: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::ChannelControl::stop(void)" (?stop@ChannelControl@FMOD@@QEAA?AW4FMOD_RESULT@@XZ)
+main.obj : error LNK2001: unresolved external symbol __imp_glutReshapeFunc
+main.obj : error LNK2001: unresolved external symbol __imp___glutCreateWindowWithExit
+main.obj : error LNK2001: unresolved external symbol __imp_glutMouseFunc
+main.obj : error LNK2001: unresolved external symbol __imp___glutInitWithExit
+main.obj : error LNK2001: unresolved external symbol __imp_glutPostRedisplay
+main.obj : error LNK2001: unresolved external symbol __imp_glutKeyboardFunc
+main.obj : error LNK2001: unresolved external symbol __imp_glutInitDisplayMode
+main.obj : error LNK2001: unresolved external symbol __imp_glutSpecialFunc
+main.obj : error LNK2001: unresolved external symbol __imp_glutTimerFunc
+main.obj : error LNK2001: unresolved external symbol __imp_glutDisplayFunc
+main.obj : error LNK2001: unresolved external symbol __imp_glutMainLoop
+main.obj : error LNK2001: unresolved external symbol __imp_glutInitWindowSize
+main.obj : error LNK2001: unresolved external symbol __imp_glutSwapBuffers
+Sprite.obj : error LNK2001: unresolved external symbol png_init_io
+Sprite.obj : error LNK2001: unresolved external symbol png_read_png
+Sprite.obj : error LNK2001: unresolved external symbol png_get_rows
+Sprite.obj : error LNK2001: unresolved external symbol png_get_rowbytes
+Sprite.obj : error LNK2001: unresolved external symbol png_set_sig_bytes
+Sprite.obj : error LNK2001: unresolved external symbol png_destroy_read_struct
+Sprite.obj : error LNK2001: unresolved external symbol png_create_read_struct
+Sprite.obj : error LNK2001: unresolved external symbol png_create_info_struct
+Sprite.obj : error LNK2001: unresolved external symbol png_get_IHDR
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\x64\Release\OpenGLGameEngine2022.exe : fatal error LNK1120: 30 unresolved externals

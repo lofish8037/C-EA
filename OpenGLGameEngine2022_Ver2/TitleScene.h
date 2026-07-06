@@ -12,7 +12,6 @@ public:
 	virtual void MouseOnClick(int button, int state, int x, int y) override;
 
 public:
-	GameObject* startBtn;
-
+	GameObject* box;
 };
 
