@@ -1,0 +1,79 @@
+﻿  AudioManager.cpp
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'AudioManager.cpp')
+  
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'AudioManager.cpp')
+  
+  GameObject.cpp
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(86,46): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(86,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(87,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(87,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(88,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(88,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(89,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(89,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(99,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(100,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  main.cpp
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\main.cpp(21,26): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  Scene.cpp
+  SceneManager.cpp
+  Sprite.cpp
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\Sprite.cpp(81,25): warning C4267: 'initializing': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\Sprite.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+  TextureManager.cpp
+  TitleScene.cpp
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'TitleScene.cpp')
+  
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'TitleScene.cpp')
+  
+  Generating Code...
+AudioManager.obj : error LNK2019: unresolved external symbol FMOD_System_Create referenced in function "enum FMOD_RESULT __cdecl FMOD::System_Create(class FMOD::System * *)" (?System_Create@FMOD@@YA?AW4FMOD_RESULT@@PEAPEAVSystem@1@@Z)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::release(void)" (?release@System@FMOD@@QEAA?AW4FMOD_RESULT@@XZ) referenced in function "public: __cdecl AudioManager::~AudioManager(void)" (??1AudioManager@@QEAA@XZ)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::init(int,unsigned int,void *)" (?init@System@FMOD@@QEAA?AW4FMOD_RESULT@@HIPEAX@Z) referenced in function "public: __cdecl AudioManager::AudioManager(void)" (??0AudioManager@@QEAA@XZ)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::createSound(char const *,unsigned int,struct FMOD_CREATESOUNDEXINFO *,class FMOD::Sound * *)" (?createSound@System@FMOD@@QEAA?AW4FMOD_RESULT@@PEBDIPEAUFMOD_CREATESOUNDEXINFO@@PEAPEAVSound@2@@Z) referenced in function "public: void __cdecl AudioManager::LoadAudio(char const *,bool,int)" (?LoadAudio@AudioManager@@QEAAXPEBD_NH@Z)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::System::playSound(class FMOD::Sound *,class FMOD::ChannelGroup *,bool,class FMOD::Channel * *)" (?playSound@System@FMOD@@QEAA?AW4FMOD_RESULT@@PEAVSound@2@PEAVChannelGroup@2@_NPEAPEAVChannel@2@@Z) referenced in function "public: void __cdecl AudioManager::PlayBGM(int)" (?PlayBGM@AudioManager@@QEAAXH@Z)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::Sound::release(void)" (?release@Sound@FMOD@@QEAA?AW4FMOD_RESULT@@XZ) referenced in function "public: __cdecl AudioManager::~AudioManager(void)" (??1AudioManager@@QEAA@XZ)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::ChannelControl::stop(void)" (?stop@ChannelControl@FMOD@@QEAA?AW4FMOD_RESULT@@XZ) referenced in function "public: void __cdecl AudioManager::PlayBGM(int)" (?PlayBGM@AudioManager@@QEAAXH@Z)
+AudioManager.obj : error LNK2019: unresolved external symbol "public: enum FMOD_RESULT __cdecl FMOD::ChannelControl::setVolume(float)" (?setVolume@ChannelControl@FMOD@@QEAA?AW4FMOD_RESULT@@M@Z) referenced in function "public: void __cdecl AudioManager::setVolume(float)" (?setVolume@AudioManager@@QEAAXM@Z)
+main.obj : error LNK2019: unresolved external symbol __imp_glutInitWindowSize referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutInitDisplayMode referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutMainLoop referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutPostRedisplay referenced in function "void __cdecl Update(int)" (?Update@@YAXH@Z)
+main.obj : error LNK2019: unresolved external symbol __imp_glutSwapBuffers referenced in function "void __cdecl display(void)" (?display@@YAXXZ)
+main.obj : error LNK2019: unresolved external symbol __imp_glutTimerFunc referenced in function "void __cdecl Update(int)" (?Update@@YAXH@Z)
+main.obj : error LNK2019: unresolved external symbol __imp_glutKeyboardFunc referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutSpecialFunc referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutReshapeFunc referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutDisplayFunc referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp_glutMouseFunc referenced in function main
+main.obj : error LNK2019: unresolved external symbol __imp___glutInitWithExit referenced in function glutInit_ATEXIT_HACK
+main.obj : error LNK2019: unresolved external symbol __imp___glutCreateWindowWithExit referenced in function glutCreateWindow_ATEXIT_HACK
+Sprite.obj : error LNK2019: unresolved external symbol png_set_sig_bytes referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_create_read_struct referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_create_info_struct referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_destroy_read_struct referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_init_io referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_get_rowbytes referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_get_rows referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_get_IHDR referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Sprite.obj : error LNK2019: unresolved external symbol png_read_png referenced in function "public: void __cdecl Sprite::initWithFile(char const *)" (?initWithFile@Sprite@@QEAAXPEBD@Z)
+Fmod\fmod_vc.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+GL\freeglut.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+GL\freeglutd.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+GL\glew32.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+lib\libpng.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+lib\libpngd.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+lib\zlibstat.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+lib\zlibstatd.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
+C:\Users\250266365\Downloads\OpenGLGameEngine2022_Ver2\OpenGLGameEngine2022_Ver2\x64\Debug\OpenGLGameEngine2022.exe : fatal error LNK1120: 30 unresolved externals
