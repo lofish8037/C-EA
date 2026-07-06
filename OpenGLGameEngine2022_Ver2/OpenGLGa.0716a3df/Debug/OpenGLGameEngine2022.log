@@ -1,33 +1,71 @@
-﻿  GameScene.cpp
-C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+﻿  AudioManager.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'AudioManager.cpp')
+  
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'AudioManager.cpp')
+  
+  GameObject.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(86,46): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(86,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(87,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(87,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(88,44): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(88,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(89,45): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(89,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(99,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(100,10): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,90): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(106,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,45): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,95): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameObject.cpp(107,9): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  GameScene.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
   (compiling source file 'GameScene.cpp')
   
-C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
   (compiling source file 'GameScene.cpp')
   
   main.cpp
-C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\main.cpp(21,26): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\main.cpp(21,26): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  Scene.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Scene.cpp(19,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Scene.cpp(26,20): warning C4018: '<': signed/unsigned mismatch
+  SceneManager.cpp
+  Sprite.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Sprite.cpp(91,20): warning C4018: '<': signed/unsigned mismatch
+  TextureManager.cpp
+  TitleScene.cpp
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'TitleScene.cpp')
+  
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
+  (compiling source file 'TitleScene.cpp')
+  
   Generating Code...
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
-libpng.lib(png.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(png.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngerror.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngerror.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngget.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngget.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngmem.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngmem.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngread.obj) : warning LNK4099: PDB '' was not found with 'libpng.lib(pngread.obj)' or at ''; linking object as if no debug info
-libpng.lib(pngrio.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngrio.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngrtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngrtran.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngrutil.obj) : warning LNK4099: PDB '' was not found with 'libpng.lib(pngrutil.obj)' or at ''; linking object as if no debug info
-libpng.lib(pngset.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngset.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(png.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(png.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngerror.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngerror.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngget.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngget.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngmem.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngmem.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngread.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngread.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngrio.obj) : warning LNK4099: PDB '' was not found with 'libpng.lib(pngrio.obj)' or at ''; linking object as if no debug info
+libpng.lib(pngrtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngrtran.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngrutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngrutil.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngset.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngset.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
 libpng.lib(pngtrans.obj) : warning LNK4099: PDB '' was not found with 'libpng.lib(pngtrans.obj)' or at ''; linking object as if no debug info
-libpng.lib(pngwio.obj) : warning LNK4099: PDB '' was not found with 'libpng.lib(pngwio.obj)' or at ''; linking object as if no debug info
-libpng.lib(pngwrite.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngwrite.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngwtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngwtran.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-libpng.lib(pngwutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngwutil.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
-zlibstat.lib(adler32.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(adler32.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-zlibstat.lib(crc32.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(crc32.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-zlibstat.lib(deflate.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(deflate.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-zlibstat.lib(inflate.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(inflate.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-zlibstat.lib(inftrees.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(inftrees.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-zlibstat.lib(trees.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(trees.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-zlibstat.lib(zutil.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(zutil.obj)' or at 'C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
-  OpenGLGameEngine2022.vcxproj -> C:\Users\250266365\Desktop\OpenGLGameEngine2022_Ver2\Debug\OpenGLGameEngine2022.exe
+libpng.lib(pngwio.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngwio.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngwrite.obj) : warning LNK4099: PDB '' was not found with 'libpng.lib(pngwrite.obj)' or at ''; linking object as if no debug info
+libpng.lib(pngwtran.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngwtran.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+libpng.lib(pngwutil.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngwutil.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
+zlibstat.lib(adler32.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(adler32.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+zlibstat.lib(crc32.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(crc32.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+zlibstat.lib(deflate.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(deflate.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+zlibstat.lib(inflate.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(inflate.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+zlibstat.lib(inftrees.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(inftrees.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+zlibstat.lib(trees.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(trees.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+zlibstat.lib(zutil.obj) : warning LNK4099: PDB 'zlibstat.pdb' was not found with 'zlibstat.lib(zutil.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\zlibstat.pdb'; linking object as if no debug info
+  OpenGLGameEngine2022.vcxproj -> C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\OpenGLGameEngine2022.exe
