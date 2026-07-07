@@ -1,9 +1,13 @@
 #pragma once
 #include"GameObject.h"
 
+
 class enemy:public GameObject
 {
 public:
+	enemy(const char* fileName);
+
+
 	 void SetPosition(float _px, float _py) override;
 	 void SetZOrder(float z) override;
 	 void SetScale(float _sx, float _sy) override;
@@ -12,12 +16,11 @@ public:
 	 void Update(float dt) override;
 
 	 void TakeDamage(int damage);
-	 bool IsDead();
+	 bool Addrow(int count);
 
 public:
+	bool IsDead;
 	int hp;
-	float speed;
-	int atteck;
-
+	int CD;
 
 };

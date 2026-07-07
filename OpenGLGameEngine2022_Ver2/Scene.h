@@ -17,6 +17,7 @@ public:
 	virtual void Draw();
 	virtual void KeyDown(string keyCode);
 	virtual void MouseOnClick(int button, int state, int x, int y);
+	virtual void MouseMove(int x, int y);
 	void AddGameObject(GameObject* obj);
 	void RemoveGameObject(GameObject* obj);
 public:

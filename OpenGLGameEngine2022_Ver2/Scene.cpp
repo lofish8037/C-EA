@@ -36,6 +36,10 @@ void Scene::MouseOnClick(int button, int state, int x, int y)
 {
 }
 
+void Scene::MouseMove(int x, int y) {
+
+}
+
 void Scene::AddGameObject(GameObject* obj)
 {
 	gameObjects->push_back(obj);

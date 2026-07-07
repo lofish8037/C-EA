@@ -21,6 +21,8 @@ public:
 	void Update(float dt);
 	void KeyDown(string keyCode);
 	void MouseOnClick(int button, int state, int x, int y);
+	void MouseMove(int x, int y);
+
 
 	void LoadScene(string sceneName);
 	Scene* GetCurrectScene();

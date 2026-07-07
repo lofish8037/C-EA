@@ -59,13 +59,15 @@ int main(int argc, char** argv) {
 
 	SceneManager::GetInstance()->LoadScene("GameScene");
 
+	srand(time(NULL));
+
 	// register handler functions
 	glutReshapeFunc(cameraSetup);               // resiz window and camera setup
 	glutDisplayFunc(display);                   // Display function
 	glutKeyboardFunc(Keyboard);					// Keyboard handler
 	glutSpecialFunc(SpKeyboard);
 	glutMouseFunc(MouseClick);				// Mouse Click handler
-	//glutPassiveMotionFunc(mouseMove);			// Mouse move without mourse button pressed
+	glutPassiveMotionFunc(MouseMove);			// Mouse move without mourse button pressed
 	//glutMotionFunc(mouseOnClickMove);			// Mouse move with mourse button pressed
 	//glutIdleFunc(idleUpdate);
 	glutTimerFunc(30, Update, 0);				// Timer function
@@ -102,4 +104,7 @@ void MouseClick(int button, int state, int x, int y) {
 		SceneManager::GetInstance()->MouseOnClick(button, state, x, windowHeight - y);
 	}
 
+}
+void MouseMove(int x, int y) {
+	SceneManager::GetInstance()->MouseMove(x, windowHeight - y);
 }

@@ -46,6 +46,11 @@ void SceneManager::MouseOnClick(int button, int state, int x, int y)
     curScene->MouseOnClick(button, state, x, y);
 }
 
+void SceneManager::MouseMove(int x, int y)
+{
+    curScene->MouseMove(x, y);
+}
+
 Scene* SceneManager::CreateScene(string sceneName)
 {
     Scene* tmpScene = nullptr;

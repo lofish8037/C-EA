@@ -88,3 +88,7 @@ void TitleScene::MouseOnClick(int button, int state, int x, int y)
 	} 
 }
 
+void TitleScene::MouseMove(int x, int y)
+{
+}
+

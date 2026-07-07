@@ -3,6 +3,15 @@
 #include "SceneManager.h"
 #include"AudioManager.h"
 
+
+enemy::enemy(const char* fileName)
+{
+	hp = 10;
+	CD = 6;
+	IsDead = false;
+	AddFrame(fileName);
+}
+
 void enemy::SetPosition(float _px, float _py)
 {
 	__super::SetPosition(_px, _py);
@@ -37,10 +46,19 @@ void enemy::Update(float dt)
 void enemy::TakeDamage(int damage)
 {
 	hp -= damage;
-	if (hp < 0) hp = 0;
+	if (hp < 0) {
+		IsDead = true;
+	}
 }
 
-bool enemy::IsDead()
+bool enemy::Addrow(int count)
 {
+	if (count == CD) {
+		return true;
+	}
+
 	return false;
 }
+
+
+
