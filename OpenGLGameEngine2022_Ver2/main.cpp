@@ -14,6 +14,7 @@ void Update(int n);
 void SpKeyboard(int key, int x, int y);
 void Keyboard(unsigned char key, int x, int y);
 void MouseClick(int button, int state, int x, int y);
+void MouseMove(int x, int y);
 
 void initRendering() {
 	glEnable(GL_DEPTH_TEST);                    // test 3D depth

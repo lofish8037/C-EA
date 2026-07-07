@@ -3,7 +3,6 @@
 #include "SceneManager.h"
 #include"AudioManager.h"
 
-
 void GameScene::Init() {
 	__super::Init();
 	gameboard = new GameObject("backg.png");
@@ -24,7 +23,6 @@ void GameScene::Init() {
 
 	//gamelevel
 	int totlaEnemies = 0;
-	r = 0;
 	if (curlv == 1) {
 		
 		timer = 60;
@@ -116,11 +114,19 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 		}
 		
 	}
+	curbubble = new Bubble();
+	curbubble->SetPosition(225, 200);
 }
 
 void GameScene::MouseMove(int x, int y)
 {
-
+	__super::MouseMove(x, y);
+	
+	angle = atan2(x - pointLine->px, y - pointLine->py) * 180.0f / acos(-1);
+	if (angle > 45) angle = 45;
+	if (angle < -45) angle = -45;
+	
+	pointLine->SetRotation(angle*-1);
 }
 
 //void GameScene::PlayerMove(int x, int y)

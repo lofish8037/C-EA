@@ -11,7 +11,7 @@ public:
 	void Update(float dt) override;
 	void KeyDown(string keyCode) override;
 	void MouseOnClick(int button, int state, int x, int y) override;
-	virtual void MouseMove(int x, int y) override;
+	void MouseMove(int x, int y) override;
 
 	//void PlayerMove(int x, int y);
 	void GridToPos(int x, int y, float& outX, float& outY);
@@ -37,5 +37,5 @@ public:
 
 	float timer;
 	bool IsGameOver;
-	float r;
+	float angle;
 };

@@ -7,40 +7,40 @@
       "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:GameScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\TitleScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:TitleScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\TitleScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:TitleScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\TitleScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:TitleScene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:Scene.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:SceneManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:Bubble.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:SceneManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:Bubble.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:Scene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|solutionrelative:GameScene.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0716A3DF-6077-4BA9-A97F-985B7315FCC2}|OpenGLGameEngine2022.vcxproj|C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -58,33 +58,33 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameScene.h",
-              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.h",
-              "RelativeDocumentMoniker": "GameScene.h",
-              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.h",
-              "RelativeToolTip": "GameScene.h",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-07-06T07:23:21.321Z",
+              "DocumentIndex": 4,
+              "Title": "SceneManager.cpp",
+              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.cpp",
+              "RelativeDocumentMoniker": "SceneManager.cpp",
+              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.cpp",
+              "RelativeToolTip": "SceneManager.cpp",
+              "ViewState": "AgIAABkAAAAAAAAAAAAuwDIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-07-06T07:55:52.387Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAmwGwAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAEYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-07-06T07:24:53.165Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "TitleScene.h",
               "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\TitleScene.h",
               "RelativeDocumentMoniker": "TitleScene.h",
@@ -97,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "TitleScene.cpp",
               "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\TitleScene.cpp",
               "RelativeDocumentMoniker": "TitleScene.cpp",
@@ -116,53 +116,40 @@
               "RelativeDocumentMoniker": "GameScene.cpp",
               "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.cpp",
               "RelativeToolTip": "GameScene.cpp",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAEwHsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAHMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-07-06T07:59:22.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SceneManager.cpp",
-              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.cpp",
-              "RelativeDocumentMoniker": "SceneManager.cpp",
-              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.cpp",
-              "RelativeToolTip": "SceneManager.cpp",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAADIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-07-06T07:55:52.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Scene.cpp",
               "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.cpp",
               "RelativeDocumentMoniker": "Scene.cpp",
               "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.cpp",
               "RelativeToolTip": "Scene.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAuwCYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-07-07T07:46:51.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Scene.h",
-              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.h",
-              "RelativeDocumentMoniker": "Scene.h",
-              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.h",
-              "RelativeToolTip": "Scene.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-07-07T07:47:00.557Z",
+              "DocumentIndex": 6,
+              "Title": "Bubble.cpp",
+              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.cpp",
+              "RelativeDocumentMoniker": "Bubble.cpp",
+              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.cpp",
+              "RelativeToolTip": "Bubble.cpp",
+              "ViewState": "AgIAABwAAAAAAAAAAAAUwDUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-07-07T02:22:03.983Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "SceneManager.h",
               "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\SceneManager.h",
               "RelativeDocumentMoniker": "SceneManager.h",
@@ -175,6 +162,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Scene.h",
+              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.h",
+              "RelativeDocumentMoniker": "Scene.h",
+              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Scene.h",
+              "RelativeToolTip": "Scene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-07-07T07:47:00.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GameScene.h",
+              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.h",
+              "RelativeDocumentMoniker": "GameScene.h",
+              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\GameScene.h",
+              "RelativeToolTip": "GameScene.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-07-06T07:23:21.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 10,
               "Title": "Bubble.h",
               "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.h",
@@ -183,21 +196,7 @@
               "RelativeToolTip": "Bubble.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-07-07T02:22:17.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Bubble.cpp",
-              "DocumentMoniker": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.cpp",
-              "RelativeDocumentMoniker": "Bubble.cpp",
-              "ToolTip": "C:\\Users\\250266365\\Desktop\\C-EA\\OpenGLGameEngine2022_Ver2\\Bubble.cpp",
-              "RelativeToolTip": "Bubble.cpp",
-              "ViewState": "AgIAABwAAAAAAAAAAAAUwDUAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-07-07T02:22:03.983Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-07T02:22:17.622Z"
             }
           ]
         }
