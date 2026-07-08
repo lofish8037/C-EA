@@ -15,11 +15,12 @@ public:
 
 	//void PlayerMove(int x, int y);
 	void GridToPos(int x, int y, float& outX, float& outY);
+	void PosToGrid(float x, float y, int& outx, int& outy);
 	bool IsgridEmpty(int x, int y);
 
 	
 	bool IsConect(Bubble* bu);
-	bool CheckDisappear();
+	bool CheckDisappear(int y, int x);
 	bool Checkfull();
 
 
@@ -34,7 +35,6 @@ public:
 	Bubble* grids[13][8];
 
 	int curlv;
-
 	float timer;
 	bool IsGameOver;
 	float angle;

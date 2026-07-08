@@ -5,7 +5,10 @@ C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(4,9): w
 C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: expected 'identifier'; found '('
   (compiling source file 'GameScene.cpp')
   
-C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(125,63): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(146,40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(147,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(149,63): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(170,41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(171,20): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(176,14): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(177,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+libpng.lib(pngget.obj) : warning LNK4099: PDB 'libpng.pdb' was not found with 'libpng.lib(pngget.obj)' or at 'C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\libpng.pdb'; linking object as if no debug info
   OpenGLGameEngine2022.vcxproj -> C:\Users\250266365\Desktop\C-EA\OpenGLGameEngine2022_Ver2\Debug\OpenGLGameEngine2022.exe

@@ -21,14 +21,17 @@ void GameScene::Init() {
 	pointLine->SetPosition(225, 200);
 	pointLine->SetZOrder(-0.5f);
 
+	//count = (13 % 2 != 0) ? 7 : 8;
+
 	//gamelevel
 	int totlaEnemies = 0;
+	timer = 0;
 	if (curlv == 1) {
 		
-		timer = 60;
+	
 	}
 	if (curlv == 2) {
-		timer = 120;
+
 	}
 
 	for (int i = 0; i < 13; i++) {
@@ -64,12 +67,34 @@ void GameScene::Update(float dt)
 {
 	__super::Update(dt);
 	
-	timer -= dt;
-	if (timer <= 0) {
-		IsGameOver = true;
+	timer += dt;
+
+	if (curbubble->Ismoving) {
+		if (IsConect(curbubble)) {
+			cout << "IsConect" << endl;
+			curbubble->Ismoving = false;
+
+			int x, y;
+			PosToGrid(curbubble->px, curbubble->py, y, x);
+			
+			grids[y][x] = curbubble;
+
+			float px, py;
+			GridToPos(y, x, px, py);
+			curbubble->SetPosition(px, py);
+
+			// Check
+			for (int i = 0; i < 13; i++) {
+			for (int j = 0; j < 8; j++) {
+				cout << grids[i][j] << " ";
+			}
+			cout << endl;
+			}
+
+			curbubble = new Bubble();
+			curbubble->SetPosition(225, 200);
+		}
 	}
-
-
 }
 
 void GameScene::KeyDown(string keyCode)
@@ -108,14 +133,13 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 			if (dx < -dy) dx = -dy;
 			float distance = sqrt(dx * dx + dy * dy);
 			cout << distance << endl;
-			curbubble->dx = (dx / distance) * 300;
-			curbubble->dy = (dy / distance) * 300;
+			curbubble->dx = (dx / distance) * 500;
+			curbubble->dy = (dy / distance) * 500;
 			curbubble->Ismoving = true;
 		}
 		
 	}
-	curbubble = new Bubble();
-	curbubble->SetPosition(225, 200);
+	
 }
 
 void GameScene::MouseMove(int x, int y)
@@ -143,8 +167,14 @@ void GameScene::MouseMove(int x, int y)
 
 void GameScene::GridToPos(int y, int x, float& outX, float& outY)
 {
-	outX = 25 * ((y % 2) + 1) + x * 25 * 2+25;
-	outY = (900 - 40) - (25 + y * (25 * sqrt(3)));
+	outX = 25 * ((y % 2) + 1) + x * 25 * 2 + 25;
+	outY = (900 - 40) - (25 + y * (25 * sqrt(3) + 3));
+}
+
+void GameScene::PosToGrid(float x, float y, int& outY, int& outX)
+{
+	outY = round((900 - 40 - y - 25) / (25 * sqrt(3) + 3));
+	outX = round((x - (25 * ((outY % 2) + 1) + 25)) / (25 * 2));
 }
 
 bool GameScene::IsgridEmpty(int x, int y)
@@ -157,11 +187,32 @@ bool GameScene::IsgridEmpty(int x, int y)
 
 bool GameScene::IsConect(Bubble* bu)
 {
+	if (bu->py >= 835) {
+		return true;
+	}
+	for (int i = 0; i < 13; i++) {
+		int count = (i % 2 != 0) ? 7 : 8;
+		for (int j = 0; j < count; j++) {
+			if (grids[i][j] != nullptr) {
+				float dx = bu->px - grids[i][j]->px;
+				float dy = bu->py - grids[i][j]->py;
+				float dis = sqrt(dx * dx + dy * dy);
+				if (dis <= 50) {
+					return true;
+				}
+			}
+		}
+	}
 	return false;
 }
 
-bool GameScene::CheckDisappear()
+bool GameScene::CheckDisappear(int y ,int x)
 {
+	bool checked[13][8] = { false };
+
+
+	if (curbubble->colortype != grids[y][x]->colortype) return false;
+
 	return false;
 }
 
