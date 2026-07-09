@@ -84,6 +84,7 @@ void GameScene::Update(float dt)
 			curbubble->SetPosition(px, py);
 
 			// Check
+			CheckDisappear(y, x);
 			for (int i = 0; i < 13; i++) {
 			for (int j = 0; j < 8; j++) {
 				cout << grids[i][j] << " ";
@@ -206,14 +207,50 @@ bool GameScene::IsConect(Bubble* bu)
 	return false;
 }
 
-bool GameScene::CheckDisappear(int y ,int x)
+void GameScene::CheckDisappear(int y ,int x)
 {
+	if (matchedBu == nullptr) {
+		matchedBu = new vector<Bubble*>();
+	}
+	else {
+		matchedBu->clear();
+	}
 	bool checked[13][8] = { false };
 
+	CheckSameType(y, x, grids[y][x]->colortype, checked);
 
-	if (curbubble->colortype != grids[y][x]->colortype) return false;
+	if (matchedBu->size() >= 3) {
+		for (int i = 0; i < matchedBu->size(); i++) {
+			RemoveGameObject(matchedBu->at(i));
 
-	return false;
+			for (int r = 0; r < 13; r++) {
+				for (int c = 0; c < 8; c++) {
+					if (grids[r][c] == matchedBu->at(i)) {grids[r][c] = nullptr;}
+					}
+				}
+			}
+		}
+	
+}
+
+void GameScene::CheckSameType(int y, int x, int buType, bool checked[13][8])
+{
+	if (y < 0 || y >= 13 || x < 0 || x >= 8) return;
+	if (grids[y][x] == nullptr) return;
+	if (checked[y][x]) return;
+	if (grids[y][x]->colortype != buType) return;
+
+	checked[y][x] = true;
+	matchedBu->push_back(grids[y][x]);
+
+	int count = (y % 2 != 0) ? x : x - 1;
+
+	CheckSameType(y - 1, count, buType, checked);
+	CheckSameType(y - 1, count +1, buType, checked);
+	CheckSameType(y, x-1, buType, checked);
+	CheckSameType(y, x+1, buType, checked);
+	CheckSameType(y + 1, count, buType, checked);
+	CheckSameType(y + 1, count+1, buType, checked);
 }
 
 bool GameScene::Checkfull()

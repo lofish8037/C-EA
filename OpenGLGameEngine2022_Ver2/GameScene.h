@@ -20,7 +20,8 @@ public:
 
 	
 	bool IsConect(Bubble* bu);
-	bool CheckDisappear(int y, int x);
+	void CheckDisappear(int y, int x);
+	void CheckSameType(int y, int x, int buType, bool checked[13][8]);
 	bool Checkfull();
 
 
@@ -33,6 +34,8 @@ public:
 	Bubble* curbubble;
 	enemy* enemise;
 	Bubble* grids[13][8];
+
+	vector<Bubble*>* matchedBu;
 
 	int curlv;
 	float timer;
