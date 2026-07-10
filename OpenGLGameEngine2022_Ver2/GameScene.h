@@ -17,7 +17,7 @@ public:
 	void GridToPos(int x, int y, float& outX, float& outY);
 	void PosToGrid(float x, float y, int& outx, int& outy);
 	bool IsgridEmpty(int x, int y);
-
+	void AddBubble();
 	
 	bool IsConect(Bubble* bu);
 	void CheckDisappear(int y, int x);
@@ -46,6 +46,7 @@ public:
 
 	int curlv;
 	float timer;
+	int dropCount;
 	bool IsGameOver;
 	float angle;
 };

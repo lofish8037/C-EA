@@ -28,6 +28,7 @@ void GameScene::Init() {
 	//count = (13 % 2 != 0) ? 7 : 8;
 
 	//gamelevel
+	dropCount = 0;
 	int totlaEnemies = 0;
 	timer = 0;
 	if (curlv == 1) {
@@ -71,6 +72,8 @@ void GameScene::Update(float dt)
 {
 	__super::Update(dt);
 	
+	if (IsGameOver) { return; }
+
 	timer += dt;
 
 	if (curbubble->Ismoving) {
@@ -82,6 +85,11 @@ void GameScene::Update(float dt)
 			PosToGrid(curbubble->px, curbubble->py, y, x);
 			
 			grids[y][x] = curbubble;
+
+			if (y == 12) {
+				cout << "gameover" << endl;
+				IsGameOver = true;
+			}
 
 			float px, py;
 			GridToPos(y, x, px, py);
@@ -131,6 +139,9 @@ void GameScene::KeyDown(string keyCode)
 void GameScene::MouseOnClick(int button, int state, int x, int y)
 {
 	__super::MouseOnClick(button, state, x, y);
+
+
+	if (IsGameOver) { return; }
 	if (!curbubble->Ismoving) {
 		float dx = x - curbubble->px;
 		float dy = y - curbubble->py;
@@ -187,6 +198,10 @@ void GameScene::PosToGrid(float x, float y, int& outY, int& outX)
 bool GameScene::IsgridEmpty(int x, int y)
 {
 	return (grids[y][x] == nullptr);
+}
+
+void GameScene::AddBubble()
+{
 }
 
 

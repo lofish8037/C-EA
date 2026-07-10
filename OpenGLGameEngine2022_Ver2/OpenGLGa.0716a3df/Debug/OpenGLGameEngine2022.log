@@ -5,10 +5,10 @@ C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\AudioMan
 C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\AudioManager.h(5,9): warning C4081: 必須是 '識別項'，但卻找到 '('
   (編譯來源檔案 'GameScene.cpp')
   
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(156,63): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(177,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(178,20): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(183,14): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(184,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(230,21): warning C4018: '<': signed/unsigned 不相符
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(166,63): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(187,41): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(188,20): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(193,14): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(194,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(240,21): warning C4018: '<': signed/unsigned 不相符
   OpenGLGameEngine2022.vcxproj -> C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\Debug\OpenGLGameEngine2022.exe
