@@ -2,6 +2,7 @@
 #include "SceneManager.h"
 #include "TitleScene.h"
 #include "GameScene.h"
+#include "EndScene.h"
 
 SceneManager* SceneManager::instance = nullptr;
 
