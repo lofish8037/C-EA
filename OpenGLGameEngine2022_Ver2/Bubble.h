@@ -15,13 +15,12 @@ public:
 	void Draw() override;
 	void Update(float dt) override;
 
-	bool IsDead();
-
 public:
 	float dx, dy;
 	int r;
 	int colortype;
 	bool Ismoving;
+	bool Isfalling;
 
 };
 

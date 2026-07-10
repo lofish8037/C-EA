@@ -8,6 +8,7 @@ string ballimg[3] = { "Ball.png" ,"Ball1.png" ,"Ball2.png" };
 Bubble::Bubble()
 {
 	Ismoving = false;
+	Isfalling = false;
 	dx = dy = 0;
 	r = 25;
 	colortype = rand() % 3;
@@ -47,18 +48,18 @@ void Bubble::Update(float dt)
 {
 	__super::Update(dt);
 
-	
+
 	if (Ismoving) {
-		py += dt* dy;
-		px += dt* dx;
+		py += dt * dy;
+		px += dt * dx;
 		if (px - r <= 25 || px + r >= 425) {
 			dx *= -1;
 		}
 	}
-}
 
-bool Bubble::IsDead()
-{
+	if (Isfalling) {
+		py -= dt * 500;
+		
+	}
 
-	return false;
 }

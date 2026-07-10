@@ -21,6 +21,10 @@ void GameScene::Init() {
 	pointLine->SetPosition(225, 200);
 	pointLine->SetZOrder(-0.5f);
 
+	deadline = new GameObject("deadline.png");
+	deadline->SetPosition(225, 280);
+	deadline->SetZOrder(-0.6f);
+
 	//count = (13 % 2 != 0) ? 7 : 8;
 
 	//gamelevel
@@ -96,6 +100,8 @@ void GameScene::Update(float dt)
 			curbubble->SetPosition(225, 200);
 		}
 	}
+
+	
 }
 
 void GameScene::KeyDown(string keyCode)
@@ -215,6 +221,7 @@ void GameScene::CheckDisappear(int y ,int x)
 	else {
 		matchedBu->clear();
 	}
+
 	bool checked[13][8] = { false };
 
 	CheckSameType(y, x, grids[y][x]->colortype, checked);
@@ -230,7 +237,24 @@ void GameScene::CheckDisappear(int y ,int x)
 				}
 			}
 		}
-	
+
+	bool checkedempty[13][8] = { false };
+	for (int i = 0; i < 8;i++) {
+		if (grids[0][i] != nullptr) {
+			CheckEmpty(0, i, checkedempty);
+		}
+	}
+	for (int r = 0; r < 13; r++) {
+		for (int c = 0; c < 8; c++) {
+			if (grids[r][c] != nullptr && !checkedempty[r][c])
+			{ 
+				grids[r][c]->Isfalling = true;
+				grids[r][c] = nullptr;
+				
+			}
+		}
+	}
+
 }
 
 void GameScene::CheckSameType(int y, int x, int buType, bool checked[13][8])
@@ -251,6 +275,23 @@ void GameScene::CheckSameType(int y, int x, int buType, bool checked[13][8])
 	CheckSameType(y, x+1, buType, checked);
 	CheckSameType(y + 1, count, buType, checked);
 	CheckSameType(y + 1, count+1, buType, checked);
+}
+
+void GameScene::CheckEmpty(int y, int x, bool checked[13][8])
+{
+	if (y < 0 || y >= 13 || x < 0 || x >= 8) return;
+	if (grids[y][x] == nullptr) return;
+	if (checked[y][x]) return;
+
+	checked[y][x] = true;
+	int count = (y % 2 != 0) ? x : x - 1;
+
+	CheckEmpty(y - 1, count, checked);
+	CheckEmpty(y - 1, count + 1, checked);
+	CheckEmpty(y, x - 1, checked);
+	CheckEmpty(y, x + 1, checked);
+	CheckEmpty(y + 1, count, checked);
+	CheckEmpty(y + 1, count + 1, checked);
 }
 
 bool GameScene::Checkfull()

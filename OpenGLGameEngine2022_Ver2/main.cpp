@@ -57,10 +57,8 @@ int main(int argc, char** argv) {
 	initRendering();                            // initialize rendering
 
 	lastFrameTime = chrono::system_clock::now();
-
-	SceneManager::GetInstance()->LoadScene("GameScene");
-
 	srand(time(NULL));
+	SceneManager::GetInstance()->LoadScene("GameScene");
 
 	// register handler functions
 	glutReshapeFunc(cameraSetup);               // resiz window and camera setup

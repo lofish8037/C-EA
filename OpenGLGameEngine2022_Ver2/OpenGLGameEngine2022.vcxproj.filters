@@ -54,6 +54,9 @@
     <ClCompile Include="Bubble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EndScene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TitleScene.h">
@@ -87,6 +90,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Bubble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EndScene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
