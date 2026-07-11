@@ -58,6 +58,7 @@ Scene* SceneManager::CreateScene(string sceneName)
     //create other scenes here
     if (sceneName == "TitleScene") { tmpScene = new TitleScene(); }
     if (sceneName == "GameScene") { tmpScene = new GameScene(); }
+    if (sceneName == "EndScene") { tmpScene = new EndScene(); }
 
     if (tmpScene != nullptr)
     {

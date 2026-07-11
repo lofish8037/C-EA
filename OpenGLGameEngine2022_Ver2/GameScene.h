@@ -21,9 +21,9 @@ public:
 	
 	bool IsConect(Bubble* bu);
 	void CheckDisappear(int y, int x);
-	void CheckSameType(int y, int x, int buType, bool checked[13][8]);
+	void CheckSameType(int y, int x, BubbleType buType, bool checked[13][8]);
 	void CheckEmpty(int y, int x, bool checked[13][8]);
-	bool Checkfull();
+
 
 
 public:
@@ -32,21 +32,24 @@ public:
 	GameObject* pointLine;
 	GameObject* magicsk;
 	GameObject* deadline;
+	GameObject* SkillUI;
+	GameObject* LevelUI;
 
+	GameObject* stopBtn;
 	GameObject* popupUI;
 	GameObject* restartB;
 	GameObject* homeB;
 
 	Bubble* curbubble;
-	enemy* enemise;
+	Enemy* Slime;
+	vector<Enemy*>* enemies;
 	Bubble* grids[13][8];
-
 	vector<Bubble*>* matchedBu;
 
 
-	int curlv;
 	float timer;
 	int dropCount;
-	bool IsGameOver;
+	int blueCount, greenCount, redCount;
+	bool IsGameOver, IsPaused;
 	float angle;
 };

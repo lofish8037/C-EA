@@ -9,9 +9,10 @@ Bubble::Bubble()
 {
 	Ismoving = false;
 	Isfalling = false;
+	Isblind = false;
 	dx = dy = 0;
 	r = 25;
-	colortype = rand() % 3;
+	colortype = BubbleType(rand() % 3);
 	AddFrame(ballimg[colortype].c_str());
 }
 
@@ -42,6 +43,10 @@ void Bubble::SetRotation(float r)
 void Bubble::Draw()
 {
 	__super::Draw();
+
+	if (Isblind) {
+
+	}
 }
 
 void Bubble::Update(float dt)
@@ -59,7 +64,6 @@ void Bubble::Update(float dt)
 
 	if (Isfalling) {
 		py -= dt * 500;
-		
 	}
 
 }

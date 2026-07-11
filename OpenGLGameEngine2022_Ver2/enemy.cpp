@@ -1,64 +1,61 @@
-#include "enemy.h"
+#include "Enemy.h"
 #include "Engine.h"
 #include "SceneManager.h"
 #include"AudioManager.h"
 
+string enemyimg[3] = { "AtkB3-1.png" ,"WaitB1.png" ,"AtkB3-3.png" };
 
-enemy::enemy(const char* fileName)
+Enemy::Enemy(const char* fileName)
 {
-	hp = 10;
-	CD = 6;
+	hp = 800;
+	px = 350;
+	py = 450;
+	CD = 10;
 	IsDead = false;
 	AddFrame(fileName);
 }
 
-void enemy::SetPosition(float _px, float _py)
+void Enemy::SetPosition(float _px, float _py)
 {
 	__super::SetPosition(_px, _py);
 }
 
-void enemy::SetZOrder(float z)
+void Enemy::SetZOrder(float z)
 {
 	__super::SetZOrder(z);
 }
 
-void enemy::SetScale(float _sx, float _sy)
+void Enemy::SetScale(float _sx, float _sy)
 {
 	__super::SetScale(_sx, _sy);
 }
 
-void enemy::SetRotation(float r)
+void Enemy::SetRotation(float r)
 {
 	__super::SetRotation(r);
 }
 
-void enemy::Draw()
+void Enemy::Draw()
 {
 	__super::Draw();
 }
 
-void enemy::Update(float dt)
+void Enemy::Update(float dt)
 {
 	__super::Update(dt);
 
 }
 
-void enemy::TakeDamage(int damage)
+void Enemy::TakeDamage(int damage)
 {
 	hp -= damage;
+	cout << hp << endl;
 	if (hp < 0) {
 		IsDead = true;
 	}
 }
 
-bool enemy::Addrow(int count)
-{
-	if (count == CD) {
-		return true;
-	}
 
-	return false;
-}
 
 
 

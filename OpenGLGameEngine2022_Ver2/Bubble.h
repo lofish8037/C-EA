@@ -1,6 +1,12 @@
 #pragma once
 #include"GameObject.h"
 
+enum BubbleType
+{
+	Green = 0,
+	Blue = 1,
+	Red = 2
+};
 class Bubble :public GameObject
 {
 public:
@@ -18,9 +24,10 @@ public:
 public:
 	float dx, dy;
 	int r;
-	int colortype;
+	BubbleType colortype;
 	bool Ismoving;
 	bool Isfalling;
+	bool Isblind;
 
 };
 

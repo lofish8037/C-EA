@@ -2,10 +2,10 @@
 #include"GameObject.h"
 
 
-class enemy:public GameObject
+class Enemy:public GameObject
 {
 public:
-	enemy(const char* fileName);
+	Enemy(const char* fileName);
 
 
 	 void SetPosition(float _px, float _py) override;
@@ -16,11 +16,10 @@ public:
 	 void Update(float dt) override;
 
 	 void TakeDamage(int damage);
-	 bool Addrow(int count);
 
 public:
 	bool IsDead;
 	int hp;
-	int CD;
+	float CD;
 
 };

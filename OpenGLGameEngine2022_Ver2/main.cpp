@@ -53,12 +53,12 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(windowWidth, windowHeight);               // set the window size
 
 	// create the window
-	glutCreateWindow("BUBBLE");
+	glutCreateWindow("MAZMORRA");
 	initRendering();                            // initialize rendering
 
 	lastFrameTime = chrono::system_clock::now();
 	srand(time(NULL));
-	SceneManager::GetInstance()->LoadScene("GameScene");
+	SceneManager::GetInstance()->LoadScene("TitleScene");
 
 	// register handler functions
 	glutReshapeFunc(cameraSetup);               // resiz window and camera setup

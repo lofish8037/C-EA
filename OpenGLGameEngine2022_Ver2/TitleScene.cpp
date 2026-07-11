@@ -2,6 +2,7 @@
 #include "AudioManager.h"
 #include "TitleScene.h"
 #include "TextureManager.h"
+#include "SceneManager.h"
 
 void TitleScene::Init()
 {
@@ -12,8 +13,13 @@ void TitleScene::Init()
 	//AudioManager::GetInstance()->PlayBGM(DEMO_BGM_INDEX);
 	//AudioManager::GetInstance()->setVolume(0.2);
 
-	box = new GameObject();
-	startBtn = new GameObject();
+	box = new GameObject("TitleSceneBG.png");
+	box->SetPosition(350, 450);
+	box->SetZOrder(-0.5f);
+
+	startBtn = new GameObject("StartBtn.png");
+	startBtn->SetPosition(350, 150);
+
 	/*for (int i = 0; i < 8; i++) {
 		string s = "Run (" + to_string(i + 1) + ").png";
 		box->AddFrame(s.c_str());
@@ -76,15 +82,17 @@ void TitleScene::KeyDown(string keyCode)
 	}*/
 
 	//cout << keyCode << endl;
-	//if (keyCode == " ") {
-	//	AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
-	//}
+	if (keyCode == " ") {
+		//AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
+		SceneManager::GetInstance()->LoadScene("GameScene");
+	}
 }
 
 void TitleScene::MouseOnClick(int button, int state, int x, int y)
 {
 	if (startBtn->CheckClicked(x, y)) {
 		cout << "clicked" << endl;
+		SceneManager::GetInstance()->LoadScene("GameScene");
 	} 
 }
 
