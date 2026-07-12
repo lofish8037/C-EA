@@ -21,13 +21,15 @@ public:
 	void Draw() override;
 	void Update(float dt) override;
 
+	void ChangeColor();
+	void ChangeBlinded(bool isblind);
+
 public:
 	float dx, dy;
 	int r;
 	BubbleType colortype;
 	bool Ismoving;
 	bool Isfalling;
-	bool Isblind;
 
 };
 

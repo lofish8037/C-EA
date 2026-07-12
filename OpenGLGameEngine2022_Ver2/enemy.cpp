@@ -3,14 +3,18 @@
 #include "SceneManager.h"
 #include"AudioManager.h"
 
-string enemyimg[3] = { "AtkB3-1.png" ,"WaitB1.png" ,"AtkB3-3.png" };
+string enemyimg[3] = { "AtkB3-1.png" ,"enemy1.png" ,"enemy1.png" };
 
 Enemy::Enemy(const char* fileName)
 {
-	hp = 800;
+	maxhp = 800;
+	hp = maxhp;
+	shield = 0;
 	px = 350;
 	py = 450;
-	CD = 10;
+	pz = 0.6;
+	CD = 15;
+	BossCD = 5;
 	IsDead = false;
 	AddFrame(fileName);
 }
@@ -38,21 +42,35 @@ void Enemy::SetRotation(float r)
 void Enemy::Draw()
 {
 	__super::Draw();
+
+	float curHP = 460 + (200 * (hp / maxhp));
+
+	glColor3f(1, 0, 0);
+	glBegin(GL_POLYGON);
+	glVertex3f(460, 325, 0.4);
+	glVertex3f(460, 310, 0.4);
+	glVertex3f(curHP, 310, 0.4);
+	glVertex3f(curHP, 325, 0.4);
+	glEnd();
+
+	glColor3f(1.0f, 1.0f, 1.0f);
+
 }
 
 void Enemy::Update(float dt)
 {
 	__super::Update(dt);
 
+	if (hp < 0) {
+		IsDead = true;
+	}
 }
 
 void Enemy::TakeDamage(int damage)
 {
 	hp -= damage;
 	cout << hp << endl;
-	if (hp < 0) {
-		IsDead = true;
-	}
+	
 }
 
 

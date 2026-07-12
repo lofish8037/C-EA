@@ -32,6 +32,9 @@ public:
 	GameObject* pointLine;
 	GameObject* magicsk;
 	GameObject* deadline;
+	
+	GameObject* FreezeUI;
+	GameObject* Freeze;
 	GameObject* SkillUI;
 	GameObject* LevelUI;
 
@@ -47,7 +50,7 @@ public:
 	vector<Bubble*>* matchedBu;
 
 
-	float timer;
+	float timer, freezetime;
 	int dropCount;
 	int blueCount, greenCount, redCount;
 	bool IsGameOver, IsPaused;

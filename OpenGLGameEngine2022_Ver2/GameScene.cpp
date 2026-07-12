@@ -11,7 +11,7 @@ void GameScene::Init() {
 
 	Topgameboard = new GameObject("frame.png");
 	Topgameboard->SetPosition(350, 450);
-	Topgameboard->SetZOrder(0.5f);
+	Topgameboard->SetZOrder(0.2f);
 
 	magicsk = new GameObject("rod.png");
 	magicsk->SetPosition(225, 200);
@@ -26,24 +26,45 @@ void GameScene::Init() {
 
 	stopBtn = new GameObject("PauseBtn.png");
 	stopBtn->SetPosition(560, 865);
-	stopBtn->SetZOrder(0.8f);
+	stopBtn->SetZOrder(0.5f);
 
 	SkillUI = new GameObject("SkillsBoard.png");
 	SkillUI->SetPosition(350, 450);
-	SkillUI->SetZOrder(0.8f);
+	SkillUI->SetZOrder(0.5f);
 
 	LevelUI = new GameObject("LevelBar.png");
 	LevelUI->SetPosition(350, 450);
-	LevelUI->SetZOrder(0.7f);
+	LevelUI->SetZOrder(0.5f);
+
+	popupUI = new GameObject("PausePopUp.png");
+	popupUI->SetPosition(350, 450);
+
+	restartB = new GameObject("RestartBtn.png");
+	restartB->SetPosition(290, 400);
+
+	homeB = new GameObject("HomeBtn.png");
+	homeB->SetPosition(405, 400);
+
+	popupUI->SetZOrder(-0.9);
+	restartB->SetZOrder(-0.9);
+	homeB->SetZOrder(-0.9);
+
+	FreezeUI = new GameObject("IceDungeonBG.png");
+	FreezeUI->SetPosition(350, 450);
+	FreezeUI->SetZOrder(-0.9);
+
+	Freeze = new GameObject("IceFrame.png");
+	Freeze->SetPosition(350, 450);
+	Freeze->SetZOrder(-0.9);
 
 	//count = (13 % 2 != 0) ? 7 : 8;
 
 	//gamelevel
 	IsPaused = false;
 	IsGameOver = false;
-	dropCount = 0;
+	dropCount = blueCount = greenCount = redCount = 0;
 	int totlaEnemies = 0;
-	timer = 0;
+	timer = freezetime = 0;
 
 	enemies = new vector<Enemy*>();
 	Slime = new Enemy("AtkB3-3.png");
@@ -76,6 +97,36 @@ void GameScene::Init() {
 void GameScene::Draw()
 {
 	__super::Draw();
+	float rp = (redCount / 15.0f);
+	float bp = (blueCount / 15.0f);
+	float gp = (greenCount / 15.0f);
+	if (rp > 1)rp = 1;
+	if (bp > 1)bp = 1;
+	if (gp > 1)gp = 1;
+
+	glColor3f(0.5, 0.5, 0.5);
+	glBegin(GL_POLYGON);
+	glVertex3f(525, 238 - (60.0f * rp), 0.4);
+	glVertex3f(525, 178 , 0.4);
+	glVertex3f(600, 178 , 0.4);
+	glVertex3f(600, 238 - (60.0f * rp), 0.4);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(480, 155 - (60.0f * bp), 0.4);
+	glVertex3f(480, 95, 0.4);
+	glVertex3f(550, 95, 0.4);
+	glVertex3f(550, 155 - (60.0f * bp), 0.4);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+	glVertex3f(575, 155 - (60.0f * gp), 0.4);
+	glVertex3f(575, 95, 0.4);
+	glVertex3f(650, 95, 0.4);
+	glVertex3f(650, 155 - (60.0f * gp), 0.4);
+	glEnd();
+
+	glColor3f(1.0f, 1.0f, 1.0f);
 }
 
 void GameScene::Update(float dt)
@@ -87,10 +138,19 @@ void GameScene::Update(float dt)
 	}
 	if (IsPaused) { return; }
 
-	timer += dt;
-	if (timer >= Slime->CD) {
-		timer = 0;
-		AddBubble();
+	if (freezetime >= 0) {
+		freezetime -= dt;
+	}
+	else {
+		timer += dt;
+		if (timer >= Slime->CD) {
+			timer = 0;
+			AddBubble();
+		}
+	}
+	if (freezetime <= 0) {
+		FreezeUI->SetZOrder(-0.9);
+		Freeze->SetZOrder(-0.9);
 	}
 
 	if (curbubble->Ismoving) {
@@ -150,13 +210,34 @@ void GameScene::KeyDown(string keyCode)
 
 	if (keyCode == " " && IsPaused) {
 		IsPaused = false;
-		RemoveGameObject(popupUI);
+		popupUI->SetZOrder(-0.9);
+		restartB->SetZOrder(-0.9);
+		homeB->SetZOrder(-0.9);
 	}
 
-	if (keyCode == "1" ) {
-		AddBubble();
+	if (keyCode == "w" && redCount>=15 ) {
+		cout << "Red" << endl;
+		Slime->TakeDamage(100);
+		redCount = 0;
 	}
-
+	if (keyCode == "a" && blueCount >= 15) {
+		cout << "blue" << endl;
+		freezetime = 5;
+		FreezeUI->SetZOrder(0.1);
+		Freeze->SetZOrder(0.4);
+		blueCount = 0;
+	}
+	if (keyCode == "d" && greenCount >= 15) {
+		cout << "greed" << endl;
+		for (int r = 0; r < 13; r++) {
+			for (int c = 0; c < 8; c++) {
+				if (grids[r][c] != nullptr){
+					grids[r][c]->ChangeColor();
+				}
+			}
+		}
+		greenCount = 0;
+	}
 }
 
 void GameScene::MouseOnClick(int button, int state, int x, int y)
@@ -167,9 +248,20 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 		cout << "clicked" << endl;
 		IsPaused = true;
 
-		popupUI = new GameObject("box.png");
-		popupUI->SetPosition(350, 450);
-		popupUI->SetZOrder(0.8);
+		popupUI->SetZOrder(0.6);
+		restartB->SetZOrder(0.8);
+		homeB->SetZOrder(0.8);
+	}
+
+	if (restartB->CheckClicked(x, y)) {
+		IsPaused = false;
+		SceneManager::GetInstance()->LoadScene("GameScene");
+		return;
+	}
+	if (homeB->CheckClicked(x, y)) {
+		IsPaused = false;
+		SceneManager::GetInstance()->LoadScene("TitleScene");
+		
 	}
 
 	//
@@ -203,18 +295,6 @@ void GameScene::MouseMove(int x, int y)
 	magicsk->SetRotation(angle * -1);
 }
 
-//void GameScene::PlayerMove(int x, int y)
-//{
-//	if (IsGameOver) {
-//		return;
-//	}
-//
-//	if (IsgridEmpty(x, y)) {
-//		grids[y][x] = curbubble;
-//	}
-//
-//}
-
 void GameScene::GridToPos(int y, int x, float& outX, float& outY)
 {
 	outX = 25 * (((y+ dropCount) % 2) + 1) + x * 25 * 2 + 25;
@@ -225,11 +305,6 @@ void GameScene::PosToGrid(float x, float y, int& outY, int& outX)
 {
 	outY = round((900 - 40 - y - 25) / (25 * sqrt(3) + 3));
 	outX = round((x - (25 * (((outY + dropCount) % 2) + 1) + 25)) / (25 * 2));
-}
-
-bool GameScene::IsgridEmpty(int x, int y)
-{
-	return (grids[y][x] == nullptr);
 }
 
 void GameScene::AddBubble()
@@ -270,8 +345,6 @@ void GameScene::AddBubble()
 }
 
 
-
-
 bool GameScene::IsConect(Bubble* bu)
 {
 	if (bu->py >= 835) {
@@ -293,6 +366,7 @@ bool GameScene::IsConect(Bubble* bu)
 	return false;
 }
 
+
 void GameScene::CheckDisappear(int y ,int x)
 {
 	if (matchedBu == nullptr) {
@@ -312,6 +386,19 @@ void GameScene::CheckDisappear(int y ,int x)
 		if (Slime != nullptr) {
 			Slime->TakeDamage(damage);
 		}
+		BubbleType type = matchedBu->at(0)->colortype;
+		switch (type) {
+		case 0:
+			greenCount += matchedBu->size();
+			break;
+		case 1:
+			blueCount += matchedBu->size();
+			break;
+		case 2:
+			redCount += matchedBu->size();
+			break;
+		}
+
 
 		for (int i = 0; i < matchedBu->size(); i++) {
 			RemoveGameObject(matchedBu->at(i));

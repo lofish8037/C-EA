@@ -19,7 +19,7 @@ public:
 
 public:
 	bool IsDead;
-	int hp;
-	float CD;
+	float hp, maxhp, shield;
+	float CD, BossCD;
 
 };
