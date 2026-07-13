@@ -42,7 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="AudioManager.cpp" />
     <ClCompile Include="Bubble.cpp" />
+    <ClCompile Include="Effect.cpp" />
     <ClCompile Include="EndScene.cpp" />
     <ClCompile Include="enemy.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="AudioManager.h" />
     <ClInclude Include="Bubble.h" />
+    <ClInclude Include="Effect.h" />
     <ClInclude Include="EndScene.h" />
     <ClInclude Include="enemy.h" />
     <ClInclude Include="Engine.h" />

@@ -2,6 +2,8 @@
 #include"Scene.h"
 #include"enemy.h"
 #include "Bubble.h"
+#include "Effect.h"
+
 
 class GameScene :public Scene
 {
@@ -16,7 +18,6 @@ public:
 	//void PlayerMove(int x, int y);
 	void GridToPos(int x, int y, float& outX, float& outY);
 	void PosToGrid(float x, float y, int& outx, int& outy);
-	bool IsgridEmpty(int x, int y);
 	void AddBubble();
 	
 	bool IsConect(Bubble* bu);
@@ -44,14 +45,14 @@ public:
 	GameObject* homeB;
 
 	Bubble* curbubble;
-	Enemy* Slime;
-	vector<Enemy*>* enemies;
+	Enemy* curenemy;
 	Bubble* grids[13][8];
 	vector<Bubble*>* matchedBu;
 
 
-	float timer, freezetime;
+	float timer, freezetime, Bosstimer;
 	int dropCount;
+	int enemyCount;
 	int blueCount, greenCount, redCount;
 	bool IsGameOver, IsPaused;
 	float angle;

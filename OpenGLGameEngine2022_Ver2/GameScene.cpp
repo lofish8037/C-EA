@@ -3,6 +3,8 @@
 #include "SceneManager.h"
 #include"AudioManager.h"
 
+string Lvimg[3] = { "LevelBar.png" ,"Level2Bar.png" ,"Level3Bar.png" };
+
 void GameScene::Init() {
 	__super::Init();
 	gameboard = new GameObject("backg.png");
@@ -32,7 +34,7 @@ void GameScene::Init() {
 	SkillUI->SetPosition(350, 450);
 	SkillUI->SetZOrder(0.5f);
 
-	LevelUI = new GameObject("LevelBar.png");
+	LevelUI = new GameObject(Lvimg[enemyCount].c_str());
 	LevelUI->SetPosition(350, 450);
 	LevelUI->SetZOrder(0.5f);
 
@@ -63,12 +65,10 @@ void GameScene::Init() {
 	IsPaused = false;
 	IsGameOver = false;
 	dropCount = blueCount = greenCount = redCount = 0;
-	int totlaEnemies = 0;
-	timer = freezetime = 0;
-
-	enemies = new vector<Enemy*>();
-	Slime = new Enemy("AtkB3-3.png");
-	enemies->push_back(Slime);
+	enemyCount = 0;
+	timer = freezetime = Bosstimer = 0;
+	
+	curenemy = new Enemy((EnemyType)enemyCount);
 
 	for (int i = 0; i < 13; i++) {
 		for (int j = 0; j < 8; j++) {
@@ -134,7 +134,7 @@ void GameScene::Update(float dt)
 	__super::Update(dt);
 	
 	if (IsGameOver) {
-		SceneManager::GetInstance()->LoadScene("TitleScene");
+		SceneManager::GetInstance()->LoadScene("EndScene");
 	}
 	if (IsPaused) { return; }
 
@@ -143,15 +143,33 @@ void GameScene::Update(float dt)
 	}
 	else {
 		timer += dt;
-		if (timer >= Slime->CD) {
+		Bosstimer += dt;
+		if (timer >= curenemy->CD) {
+			if (enemyCount == 2 && Bosstimer >= 25) {
+				for (int r = 0; r < 13; r++) {
+					for (int c = 0; c < 8; c++) {
+						if (grids[r][c] != nullptr) {
+							grids[r][c]->ChangeBlinded(true);
+						}
+					}
+				}
+				Bosstimer = 0;
+			}
+			curenemy->ChangeState(Att);
 			timer = 0;
 			AddBubble();
 		}
+		else if (timer >= 1) {
+			curenemy->ChangeState(Wait);
+		}
+		
 	}
 	if (freezetime <= 0) {
 		FreezeUI->SetZOrder(-0.9);
 		Freeze->SetZOrder(-0.9);
 	}
+	
+	
 
 	if (curbubble->Ismoving) {
 		if (IsConect(curbubble)) {
@@ -187,11 +205,19 @@ void GameScene::Update(float dt)
 		}
 	}
 
-	if (Slime->IsDead) {
-		enemies->erase(enemies->begin());
-		RemoveGameObject(Slime);
+	if (curenemy->IsDead) {
+		delete(curenemy);
+		curenemy = nullptr;
+		enemyCount++;
+		if (enemyCount < 3) {
+			curenemy = new Enemy((EnemyType)enemyCount);
+			LevelUI->sprites->clear();
+			LevelUI->AddFrame(Lvimg[enemyCount].c_str());
+			timer = 0;
+		}
 	}
-	if (enemies->size() == 0) {
+	if (enemyCount >= 2) {
+		enemyCount = 0;
 		IsGameOver = true;
 	}
 }
@@ -217,7 +243,7 @@ void GameScene::KeyDown(string keyCode)
 
 	if (keyCode == "w" && redCount>=15 ) {
 		cout << "Red" << endl;
-		Slime->TakeDamage(100);
+		curenemy->TakeDamage(100);
 		redCount = 0;
 	}
 	if (keyCode == "a" && blueCount >= 15) {
@@ -261,7 +287,6 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 	if (homeB->CheckClicked(x, y)) {
 		IsPaused = false;
 		SceneManager::GetInstance()->LoadScene("TitleScene");
-		
 	}
 
 	//
@@ -383,8 +408,8 @@ void GameScene::CheckDisappear(int y ,int x)
 	if (matchedBu->size() >= 3) {
 
 		int damage = round(5 * pow(1.4, matchedBu->size()));
-		if (Slime != nullptr) {
-			Slime->TakeDamage(damage);
+		if (curenemy != nullptr) {
+			curenemy->TakeDamage(damage);
 		}
 		BubbleType type = matchedBu->at(0)->colortype;
 		switch (type) {
@@ -401,6 +426,7 @@ void GameScene::CheckDisappear(int y ,int x)
 
 
 		for (int i = 0; i < matchedBu->size(); i++) {
+			new Effect(matchedBu->at(i)->px, matchedBu->at(i)->py);
 			RemoveGameObject(matchedBu->at(i));
 
 			for (int r = 0; r < 13; r++) {

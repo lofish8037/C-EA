@@ -9,7 +9,7 @@ Bubble::Bubble()
 {
 	Ismoving = false;
 	Isfalling = false;
-
+	timer = 5;
 	dx = dy = 0;
 	r = 25;
 	colortype = BubbleType(rand() % 3);
@@ -49,7 +49,7 @@ void Bubble::Draw()
 void Bubble::Update(float dt)
 {
 	__super::Update(dt);
-
+	timer -= dt;
 
 	if (Ismoving) {
 		py += dt * dy;
@@ -61,6 +61,10 @@ void Bubble::Update(float dt)
 
 	if (Isfalling) {
 		py -= dt * 500;
+	}
+
+	if (timer<=0&& Isblinded) {
+		ChangeBlinded(false);
 	}
 
 }
@@ -76,9 +80,11 @@ void Bubble::ChangeBlinded(bool isblind)
 {
 	sprites->clear();
 	if (isblind) {
+		Isblinded = true;
 		AddFrame("BadBall.png");
 	}
 	else {
+		Isblinded = false;
 		AddFrame(ballimg[colortype].c_str());
 	}
 }

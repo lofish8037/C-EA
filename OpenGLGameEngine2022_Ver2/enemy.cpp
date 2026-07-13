@@ -2,21 +2,64 @@
 #include "Engine.h"
 #include "SceneManager.h"
 #include"AudioManager.h"
+#include "TextureManager.h"
 
-string enemyimg[3] = { "AtkB3-1.png" ,"enemy1.png" ,"enemy1.png" };
 
-Enemy::Enemy(const char* fileName)
+Enemy::Enemy(EnemyType type)
 {
-	maxhp = 800;
-	hp = maxhp;
-	shield = 0;
 	px = 350;
 	py = 450;
 	pz = 0.6;
-	CD = 15;
-	BossCD = 5;
 	IsDead = false;
-	AddFrame(fileName);
+	waitsprites = new vector<int>();
+	attsprites = new vector<int>();
+
+	curanim = Wait;
+
+	switch (type) {
+	case 0 :
+		CD = 15;
+		maxhp = 800;
+		maxshield = 0;
+		AddFrame("WaitA1.png");
+		AddwaitFrame("WaitA1.png");
+		AddwaitFrame("WaitA2.png");
+		AddwaitFrame("WaitA3.png");
+		AddattFrame("AtkA1.png");
+		AddattFrame("AtkA2.png");
+		AddattFrame("AtkA3.png");
+		break;
+
+	case 1:
+		CD = 15;
+		maxhp = 800;
+		maxshield = 50;
+		AddFrame("WaitB1.png");
+		AddwaitFrame("WaitB1.png");
+		AddwaitFrame("WaitB2.png");
+		AddwaitFrame("WaitB3.png");
+		AddattFrame("AtkB1.png");
+		AddattFrame("AtkB2.png");
+		AddattFrame("AtkB3.png");
+		break;
+
+	case 2:
+		CD = 5;
+		maxhp = 800;
+		maxshield = 100;
+		AddFrame("WaitC1.png");
+		AddwaitFrame("WaitC1.png");
+		AddwaitFrame("WaitC2.png");
+		AddwaitFrame("WaitC3.png");
+		AddattFrame("AtkC1.png");
+		AddattFrame("AtkC2.png");
+		AddattFrame("AtkC3.png");
+		break;
+	}
+	
+	Hp = maxhp;
+	Shield = maxshield;
+	
 }
 
 void Enemy::SetPosition(float _px, float _py)
@@ -41,10 +84,13 @@ void Enemy::SetRotation(float r)
 
 void Enemy::Draw()
 {
+	
+	
 	__super::Draw();
 
-	float curHP = 460 + (200 * (hp / maxhp));
 
+	float curHP = 460 + (200 * (Hp / maxhp));
+	float curSh = 460 + (200 * (Shield / maxshield));
 	glColor3f(1, 0, 0);
 	glBegin(GL_POLYGON);
 	glVertex3f(460, 325, 0.4);
@@ -61,15 +107,45 @@ void Enemy::Update(float dt)
 {
 	__super::Update(dt);
 
-	if (hp < 0) {
+	if (Hp < 0) {
 		IsDead = true;
 	}
 }
 
 void Enemy::TakeDamage(int damage)
 {
-	hp -= damage;
-	cout << hp << endl;
+	Hp -= damage;
+	cout << Hp << endl;
+	
+}
+
+void Enemy::AddwaitFrame(const char* filename)
+{
+	TextureInfo info = TextureManager::GetInstance()->GetTextureInfo(filename);
+	w = info.width;
+	h = info.height;
+	waitsprites->push_back(info.textureID);
+}
+
+void Enemy::AddattFrame(const char* filename)
+{
+	TextureInfo info = TextureManager::GetInstance()->GetTextureInfo(filename);
+	w = info.width;
+	h = info.height;
+	attsprites->push_back(info.textureID);
+}
+
+void Enemy::ChangeState(EnemyState anim)
+{
+	curanim = anim;
+	switch (curanim) {
+	case 0:
+		sprites = waitsprites;
+		break;
+	case 1:
+		sprites = attsprites;
+		break;
+	}
 	
 }
 

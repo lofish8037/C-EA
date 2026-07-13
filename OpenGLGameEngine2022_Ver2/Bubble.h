@@ -30,6 +30,7 @@ public:
 	BubbleType colortype;
 	bool Ismoving;
 	bool Isfalling;
-
+	bool Isblinded;
+	float timer;
 };
 
