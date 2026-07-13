@@ -10,7 +10,7 @@ class EndScene: public Scene
 		void Update(float dt) override;
 		virtual void KeyDown(string keyCode) override;
 		virtual void MouseOnClick(int button, int state, int x, int y) override;
-		virtual void MouseMove(int x, int y) override;
+
 
 	public:
 		GameObject* Btn;

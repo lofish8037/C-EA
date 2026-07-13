@@ -4,6 +4,7 @@
 #include"AudioManager.h"
 
 string Lvimg[3] = { "LevelBar.png" ,"Level2Bar.png" ,"Level3Bar.png" };
+bool GameScene::IsWin = false;
 
 void GameScene::Init() {
 	__super::Init();
@@ -63,12 +64,17 @@ void GameScene::Init() {
 
 	//gamelevel
 	IsPaused = false;
-	IsGameOver = false;
+	IsGameOver = IsWin = false;
 	dropCount = blueCount = greenCount = redCount = 0;
 	enemyCount = 0;
 	timer = freezetime = Bosstimer = 0;
 	
 	curenemy = new Enemy((EnemyType)enemyCount);
+	
+	AudioManager::GetInstance()->PlayBGM(DEMO_SlimeBgm_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/Ice.mp3", false, DEMO_Ice_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/Fire.mp3", false, DEMO_Fire_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/Change.mp3", false, DEMO_Change_INDEX);
 
 	for (int i = 0; i < 13; i++) {
 		for (int j = 0; j < 8; j++) {
@@ -106,24 +112,24 @@ void GameScene::Draw()
 
 	glColor3f(0.5, 0.5, 0.5);
 	glBegin(GL_POLYGON);
-	glVertex3f(525, 238 - (60.0f * rp), 0.4);
-	glVertex3f(525, 178 , 0.4);
-	glVertex3f(600, 178 , 0.4);
-	glVertex3f(600, 238 - (60.0f * rp), 0.4);
+	glVertex3f(525, 238 , 0.4);
+	glVertex3f(525, 178 + (60.0f * rp), 0.4);
+	glVertex3f(600, 178 + (60.0f * rp), 0.4);
+	glVertex3f(600, 238 , 0.4);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(480, 155 - (60.0f * bp), 0.4);
-	glVertex3f(480, 95, 0.4);
-	glVertex3f(550, 95, 0.4);
-	glVertex3f(550, 155 - (60.0f * bp), 0.4);
+	glVertex3f(480, 155, 0.4);
+	glVertex3f(480, 95 + (60.0f * bp), 0.4);
+	glVertex3f(550, 95 + (60.0f * bp), 0.4);
+	glVertex3f(550, 155, 0.4);
 	glEnd();
 
 	glBegin(GL_POLYGON);
-	glVertex3f(575, 155 - (60.0f * gp), 0.4);
-	glVertex3f(575, 95, 0.4);
-	glVertex3f(650, 95, 0.4);
-	glVertex3f(650, 155 - (60.0f * gp), 0.4);
+	glVertex3f(575, 155 , 0.4);
+	glVertex3f(575, 95+ (60.0f * gp), 0.4);
+	glVertex3f(650, 95+ (60.0f * gp), 0.4);
+	glVertex3f(650, 155 , 0.4);
 	glEnd();
 
 	glColor3f(1.0f, 1.0f, 1.0f);
@@ -145,19 +151,21 @@ void GameScene::Update(float dt)
 		timer += dt;
 		Bosstimer += dt;
 		if (timer >= curenemy->CD) {
+			curenemy->ChangeState(Att);
+			AudioManager::GetInstance()->PlaySFX(11 + enemyCount);
+			timer = 0;
+			AddBubble();
 			if (enemyCount == 2 && Bosstimer >= 25) {
 				for (int r = 0; r < 13; r++) {
 					for (int c = 0; c < 8; c++) {
 						if (grids[r][c] != nullptr) {
+							AudioManager::GetInstance()->PlaySFX(DEMO_Blind_INDEX);
 							grids[r][c]->ChangeBlinded(true);
 						}
 					}
 				}
 				Bosstimer = 0;
 			}
-			curenemy->ChangeState(Att);
-			timer = 0;
-			AddBubble();
 		}
 		else if (timer >= 1) {
 			curenemy->ChangeState(Wait);
@@ -211,13 +219,16 @@ void GameScene::Update(float dt)
 		enemyCount++;
 		if (enemyCount < 3) {
 			curenemy = new Enemy((EnemyType)enemyCount);
+			AudioManager::GetInstance()->PlayBGM(1+ enemyCount);
+			AudioManager::GetInstance()->setVolume(0.2);
 			LevelUI->sprites->clear();
 			LevelUI->AddFrame(Lvimg[enemyCount].c_str());
 			timer = 0;
 		}
 	}
-	if (enemyCount >= 2) {
+	if (enemyCount > 2) {
 		enemyCount = 0;
+		IsWin = true;
 		IsGameOver = true;
 	}
 }
@@ -226,16 +237,14 @@ void GameScene::KeyDown(string keyCode)
 {
 	__super::KeyDown(keyCode);
 
-	//if (keyCode == "a"&& r<=45) {
-	//	r ++;
-	//}
-	//else if (keyCode == "d" && r >= -45) {
-	//	r --;
-	//}
-	//pointLine->SetRotation(r);
-
-	if (keyCode == " " && IsPaused) {
+	if (keyCode == "p" && IsPaused) {
 		IsPaused = false;
+		popupUI->SetZOrder(0.6);
+		restartB->SetZOrder(0.8);
+		homeB->SetZOrder(0.8);
+	}
+	if (keyCode == " " && !IsPaused) {
+		IsPaused = true;
 		popupUI->SetZOrder(-0.9);
 		restartB->SetZOrder(-0.9);
 		homeB->SetZOrder(-0.9);
@@ -243,11 +252,13 @@ void GameScene::KeyDown(string keyCode)
 
 	if (keyCode == "w" && redCount>=15 ) {
 		cout << "Red" << endl;
-		curenemy->TakeDamage(100);
+		AudioManager::GetInstance()->PlaySFX(DEMO_Fire_INDEX);
+		curenemy->Hp -= 100;
 		redCount = 0;
 	}
 	if (keyCode == "a" && blueCount >= 15) {
 		cout << "blue" << endl;
+		AudioManager::GetInstance()->PlaySFX(DEMO_Ice_INDEX);
 		freezetime = 5;
 		FreezeUI->SetZOrder(0.1);
 		Freeze->SetZOrder(0.4);
@@ -255,6 +266,7 @@ void GameScene::KeyDown(string keyCode)
 	}
 	if (keyCode == "d" && greenCount >= 15) {
 		cout << "greed" << endl;
+		AudioManager::GetInstance()->PlaySFX(DEMO_Change_INDEX);
 		for (int r = 0; r < 13; r++) {
 			for (int c = 0; c < 8; c++) {
 				if (grids[r][c] != nullptr){
@@ -264,13 +276,17 @@ void GameScene::KeyDown(string keyCode)
 		}
 		greenCount = 0;
 	}
+
+	if (keyCode == "0") {
+		curenemy->Hp -= 500;
+	}
 }
 
 void GameScene::MouseOnClick(int button, int state, int x, int y)
 {
 	__super::MouseOnClick(button, state, x, y);
-
 	if (stopBtn->CheckClicked(x, y)) {
+		AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
 		cout << "clicked" << endl;
 		IsPaused = true;
 
@@ -280,11 +296,13 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 	}
 
 	if (restartB->CheckClicked(x, y)) {
+		AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
 		IsPaused = false;
 		SceneManager::GetInstance()->LoadScene("GameScene");
 		return;
 	}
 	if (homeB->CheckClicked(x, y)) {
+		AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
 		IsPaused = false;
 		SceneManager::GetInstance()->LoadScene("TitleScene");
 	}
@@ -292,6 +310,7 @@ void GameScene::MouseOnClick(int button, int state, int x, int y)
 	//
 	if (IsGameOver || IsPaused) { return; }
 	if (!curbubble->Ismoving) {
+		AudioManager::GetInstance()->PlaySFX(DEMO_BubbleShoot_INDEX);
 		float dx = x - curbubble->px;
 		float dy = y - curbubble->py;
 
@@ -408,10 +427,11 @@ void GameScene::CheckDisappear(int y ,int x)
 	if (matchedBu->size() >= 3) {
 
 		int damage = round(5 * pow(1.4, matchedBu->size()));
-		if (curenemy != nullptr) {
-			curenemy->TakeDamage(damage);
-		}
 		BubbleType type = matchedBu->at(0)->colortype;
+		if (curenemy != nullptr) {
+			AudioManager::GetInstance()->PlaySFX(DEMO_BubbleDistory_INDEX);
+			curenemy->TakeDamage(damage,(int)type);
+		}
 		switch (type) {
 		case 0:
 			greenCount += matchedBu->size();

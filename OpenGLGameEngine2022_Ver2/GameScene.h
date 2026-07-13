@@ -28,6 +28,7 @@ public:
 
 
 public:
+	static bool IsWin;
 	GameObject* gameboard;
 	GameObject* Topgameboard;
 	GameObject* pointLine;

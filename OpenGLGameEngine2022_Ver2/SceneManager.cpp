@@ -3,6 +3,7 @@
 #include "TitleScene.h"
 #include "GameScene.h"
 #include "EndScene.h"
+#include "HowtoplayScene.h"
 
 SceneManager* SceneManager::instance = nullptr;
 
@@ -59,6 +60,7 @@ Scene* SceneManager::CreateScene(string sceneName)
     if (sceneName == "TitleScene") { tmpScene = new TitleScene(); }
     if (sceneName == "GameScene") { tmpScene = new GameScene(); }
     if (sceneName == "EndScene") { tmpScene = new EndScene(); }
+    if (sceneName == "HowtoplayScene") { tmpScene = new HowtoplayScene(); }
 
     if (tmpScene != nullptr)
     {

@@ -8,10 +8,10 @@ void TitleScene::Init()
 {
 	__super::Init();
 
-	//AudioManager::GetInstance()->LoadAudio("Resources/bensound-ukulele.mp3", true, DEMO_BGM_INDEX);
-	//AudioManager::GetInstance()->LoadAudio("Resources/weapon_player.wav", false, DEMO_SFX_INDEX);
-	//AudioManager::GetInstance()->PlayBGM(DEMO_BGM_INDEX);
-	//AudioManager::GetInstance()->setVolume(0.2);
+	AudioManager::GetInstance()->LoadAudio("Resources/TitleBgm.mp3", true, DEMO_BGM_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/ButtonClick.mp3", false, DEMO_SFX_INDEX);
+	AudioManager::GetInstance()->PlayBGM(DEMO_BGM_INDEX);
+	AudioManager::GetInstance()->setVolume(0.2);
 
 	box = new GameObject("TitleSceneBG.png");
 	box->SetPosition(350, 450);
@@ -83,8 +83,8 @@ void TitleScene::KeyDown(string keyCode)
 
 	//cout << keyCode << endl;
 	if (keyCode == " ") {
-		//AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
-		SceneManager::GetInstance()->LoadScene("GameScene");
+		AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
+		SceneManager::GetInstance()->LoadScene("HowtoplayScene");
 	}
 }
 
@@ -92,7 +92,8 @@ void TitleScene::MouseOnClick(int button, int state, int x, int y)
 {
 	if (startBtn->CheckClicked(x, y)) {
 		cout << "clicked" << endl;
-		SceneManager::GetInstance()->LoadScene("GameScene");
+		AudioManager::GetInstance()->PlaySFX(DEMO_SFX_INDEX);
+		SceneManager::GetInstance()->LoadScene("HowtoplayScene");
 	} 
 }
 

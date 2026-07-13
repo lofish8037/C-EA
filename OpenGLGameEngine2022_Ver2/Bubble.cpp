@@ -7,6 +7,8 @@ string ballimg[3] = { "Ball.png" ,"Ball1.png" ,"Ball2.png" };
 
 Bubble::Bubble()
 {
+	AudioManager::GetInstance()->LoadAudio("Resources/BubbleShoot.mp3", false, DEMO_BubbleShoot_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/BubbleDistory.mp3", false, DEMO_BubbleDistory_INDEX);
 	Ismoving = false;
 	Isfalling = false;
 	timer = 5;
@@ -49,7 +51,6 @@ void Bubble::Draw()
 void Bubble::Update(float dt)
 {
 	__super::Update(dt);
-	timer -= dt;
 
 	if (Ismoving) {
 		py += dt * dy;
@@ -63,9 +64,13 @@ void Bubble::Update(float dt)
 		py -= dt * 500;
 	}
 
-	if (timer<=0&& Isblinded) {
-		ChangeBlinded(false);
+	if (Isblinded) {
+		timer -= dt;
+		if (timer <= 0) {
+			ChangeBlinded(false);
+		}
 	}
+	
 
 }
 
@@ -81,6 +86,7 @@ void Bubble::ChangeBlinded(bool isblind)
 	sprites->clear();
 	if (isblind) {
 		Isblinded = true;
+		timer = 5;
 		AddFrame("BadBall.png");
 	}
 	else {

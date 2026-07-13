@@ -25,7 +25,7 @@ public:
 	 void Draw() override;
 	 void Update(float dt) override;
 
-	 void TakeDamage(int damage);
+	 void TakeDamage(int damage, int bubbletype);
 	 void AddwaitFrame(const char* filename);
 	 void AddattFrame(const char* filename);
 	 void ChangeState(EnemyState anim);
@@ -38,5 +38,5 @@ public:
 	float CD;
 	vector<int>* waitsprites;
 	vector<int>* attsprites;
-	
+	int shieldtype;
 };
