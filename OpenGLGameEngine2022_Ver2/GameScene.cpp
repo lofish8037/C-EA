@@ -74,8 +74,8 @@ void GameScene::Init() {
 	AudioManager::GetInstance()->PlayBGM(DEMO_SlimeBgm_INDEX);
 	AudioManager::GetInstance()->setVolume(0.2);
 	AudioManager::GetInstance()->LoadAudio("Resources/Ice.mp3", false, DEMO_Ice_INDEX);
-	AudioManager::GetInstance()->LoadAudio("Resources/Fire.mp3", false, DEMO_Fire_INDEX);
-	AudioManager::GetInstance()->LoadAudio("Resources/Change.mp3", false, DEMO_Change_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/Fire.wav", false, DEMO_Fire_INDEX);
+	AudioManager::GetInstance()->LoadAudio("Resources/Change.wav", false, DEMO_Change_INDEX);
 
 	for (int i = 0; i < 13; i++) {
 		for (int j = 0; j < 8; j++) {
@@ -238,13 +238,13 @@ void GameScene::KeyDown(string keyCode)
 {
 	__super::KeyDown(keyCode);
 
-	if (keyCode == "p" && IsPaused) {
+	if (keyCode == "p" && !IsPaused) {
 		IsPaused = true;
 		popupUI->SetZOrder(0.6);
 		restartB->SetZOrder(0.8);
 		homeB->SetZOrder(0.8);
 	}
-	if (keyCode == " " && !IsPaused) {
+	if (keyCode == " " && IsPaused) {
 		IsPaused = false;
 		popupUI->SetZOrder(-0.9);
 		restartB->SetZOrder(-0.9);

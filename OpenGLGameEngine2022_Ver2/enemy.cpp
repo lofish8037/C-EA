@@ -20,7 +20,7 @@ Enemy::Enemy(EnemyType type)
 	switch (type) {
 	case 0 :
 		AudioManager::GetInstance()->LoadAudio("Resources/SlimeBgm.mp3", true, DEMO_SlimeBgm_INDEX);
-		AudioManager::GetInstance()->LoadAudio("Resources/SlimeAtk.mp3", false, DEMO_SlimeAtk_INDEX);
+		AudioManager::GetInstance()->LoadAudio("Resources/SlimeAtk.wav", false, DEMO_SlimeAtk_INDEX);
 		CD = 15;
 		maxhp = 800;
 		maxshield = 0;
@@ -36,7 +36,7 @@ Enemy::Enemy(EnemyType type)
 
 	case 1:
 		AudioManager::GetInstance()->LoadAudio("Resources/CoffinBgm.mp3", true, DEMO_CoffinBgm_INDEX);
-		AudioManager::GetInstance()->LoadAudio("Resources/CoffinAtk.mp3", false, DEMO_CoffinAtk_INDEX);
+		AudioManager::GetInstance()->LoadAudio("Resources/CoffinAtk.wav", false, DEMO_CoffinAtk_INDEX);
 		CD = 10;
 		maxhp = 1300;
 		maxshield = 50;
@@ -53,7 +53,7 @@ Enemy::Enemy(EnemyType type)
 	case 2:
 		AudioManager::GetInstance()->LoadAudio("Resources/BossBgm.mp3", true, DEMO_BossBgm_INDEX);
 		AudioManager::GetInstance()->LoadAudio("Resources/BossAtk.mp3", false, DEMO_BossAtk_INDEX);
-		AudioManager::GetInstance()->LoadAudio("Resources/Blind.mp3", false, DEMO_Blind_INDEX);
+		AudioManager::GetInstance()->LoadAudio("Resources/Blind.wav", false, DEMO_Blind_INDEX);
 		CD = 5;
 		maxhp = 1500;
 		maxshield = 100;
