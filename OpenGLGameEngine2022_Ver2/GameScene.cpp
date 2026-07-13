@@ -72,6 +72,7 @@ void GameScene::Init() {
 	curenemy = new Enemy((EnemyType)enemyCount);
 	
 	AudioManager::GetInstance()->PlayBGM(DEMO_SlimeBgm_INDEX);
+	AudioManager::GetInstance()->setVolume(0.2);
 	AudioManager::GetInstance()->LoadAudio("Resources/Ice.mp3", false, DEMO_Ice_INDEX);
 	AudioManager::GetInstance()->LoadAudio("Resources/Fire.mp3", false, DEMO_Fire_INDEX);
 	AudioManager::GetInstance()->LoadAudio("Resources/Change.mp3", false, DEMO_Change_INDEX);
