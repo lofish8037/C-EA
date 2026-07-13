@@ -24,11 +24,22 @@ void HowtoplayScene::Init()
 
 void HowtoplayScene::Update(float dt)
 {
+
 }
 
 void HowtoplayScene::KeyDown(string keyCode)
 {
-
+	if (count == 0 && keyCode == " ") {
+		count++;
+		HTPbackground->sprites->clear();
+		NextBtn->sprites->clear();
+		NextBtn->AddFrame("GoBtn.png");
+		HTPbackground->AddFrame("HowToPlay2.png");
+	}
+	else if (count == 1 && keyCode == " ") {
+		count = 0;
+		SceneManager::GetInstance()->LoadScene("GameScene");
+	}
 }
 
 void HowtoplayScene::MouseOnClick(int button, int state, int x, int y)
