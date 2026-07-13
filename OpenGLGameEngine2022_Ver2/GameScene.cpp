@@ -239,13 +239,13 @@ void GameScene::KeyDown(string keyCode)
 	__super::KeyDown(keyCode);
 
 	if (keyCode == "p" && IsPaused) {
-		IsPaused = false;
+		IsPaused = true;
 		popupUI->SetZOrder(0.6);
 		restartB->SetZOrder(0.8);
 		homeB->SetZOrder(0.8);
 	}
 	if (keyCode == " " && !IsPaused) {
-		IsPaused = true;
+		IsPaused = false;
 		popupUI->SetZOrder(-0.9);
 		restartB->SetZOrder(-0.9);
 		homeB->SetZOrder(-0.9);
