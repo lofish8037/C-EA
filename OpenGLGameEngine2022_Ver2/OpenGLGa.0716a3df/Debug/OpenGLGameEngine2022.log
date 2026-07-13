@@ -25,23 +25,23 @@ C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScen
 C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(133,24): warning C4305: '引數': 從 'double' 轉換為 'GLfloat'，是由較大的類型轉換為較小的類型，可能導致資料遺失
 C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(177,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
 C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(178,21): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(224,43): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(243,22): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(244,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(245,20): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(249,22): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(250,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(251,20): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(264,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(265,21): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(294,22): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(295,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(296,20): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(335,63): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(345,54): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(346,20): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(351,14): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(352,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(430,14): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
-C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(449,21): warning C4018: '<': signed/unsigned 不相符
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(226,43): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(245,22): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(246,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(247,20): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(251,22): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(252,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(253,20): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(266,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(267,21): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(296,22): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(297,23): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(298,20): warning C4305: '引數': 從 'double' 轉換為 'float'，是由較大的類型轉換為較小的類型，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(337,63): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(347,54): warning C4244: '=': 將 'int' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(348,20): warning C4244: '=': 將 'double' 轉換為 'float'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(353,14): warning C4244: '=': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(354,14): warning C4244: '=': 將 'float' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(432,14): warning C4244: '正在初始化': 將 'double' 轉換為 'int'，由於類型不同，可能導致資料遺失
+C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\GameScene.cpp(451,21): warning C4018: '<': signed/unsigned 不相符
   OpenGLGameEngine2022.vcxproj -> C:\Users\User\Documents\homeworks\C++_EA\C-EA\OpenGLGameEngine2022_Ver2\Debug\OpenGLGameEngine2022.exe

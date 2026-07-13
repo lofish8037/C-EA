@@ -218,9 +218,11 @@ void GameScene::Update(float dt)
 		delete(curenemy);
 		curenemy = nullptr;
 		enemyCount++;
+		
 		if (enemyCount < 3) {
+			
 			curenemy = new Enemy((EnemyType)enemyCount);
-			AudioManager::GetInstance()->PlayBGM(1+ enemyCount);
+			AudioManager::GetInstance()->PlayBGM(1 + enemyCount);
 			AudioManager::GetInstance()->setVolume(0.2);
 			LevelUI->sprites->clear();
 			LevelUI->AddFrame(Lvimg[enemyCount].c_str());
