@@ -21,8 +21,8 @@ Enemy::Enemy(EnemyType type)
 	case 0 :
 		AudioManager::GetInstance()->LoadAudio("Resources/SlimeBgm.mp3", true, DEMO_SlimeBgm_INDEX);
 		AudioManager::GetInstance()->LoadAudio("Resources/SlimeAtk.wav", false, DEMO_SlimeAtk_INDEX);
-		CD = 15;
-		maxhp = 800;
+		CD = 6;
+		maxhp = 400;
 		maxshield = 0;
 		shieldtype = -1;
 		AddFrame("WaitA1.png");
@@ -37,8 +37,8 @@ Enemy::Enemy(EnemyType type)
 	case 1:
 		AudioManager::GetInstance()->LoadAudio("Resources/CoffinBgm.mp3", true, DEMO_CoffinBgm_INDEX);
 		AudioManager::GetInstance()->LoadAudio("Resources/CoffinAtk.wav", false, DEMO_CoffinAtk_INDEX);
-		CD = 10;
-		maxhp = 1300;
+		CD = 4;
+		maxhp = 600;
 		maxshield = 50;
 		shieldtype = rand() % 3;
 		AddFrame("WaitB1.png");
@@ -54,8 +54,8 @@ Enemy::Enemy(EnemyType type)
 		AudioManager::GetInstance()->LoadAudio("Resources/BossBgm.mp3", true, DEMO_BossBgm_INDEX);
 		AudioManager::GetInstance()->LoadAudio("Resources/BossAtk.mp3", false, DEMO_BossAtk_INDEX);
 		AudioManager::GetInstance()->LoadAudio("Resources/Blind.wav", false, DEMO_Blind_INDEX);
-		CD = 5;
-		maxhp = 1500;
+		CD = 4;
+		maxhp = 900;
 		maxshield = 100;
 		shieldtype = rand() % 3;
 		AddFrame("WaitC1.png");
